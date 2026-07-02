@@ -242,6 +242,18 @@ do
   -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
   -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
   -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
+  --
+  --Prime's
+  vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
+
+  vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+  vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+  vim.keymap.set("n", "J", "mzJ`z")
+  vim.keymap.set("n", "<C-d>", "<C-d>zz")
+  vim.keymap.set("n", "<C-u>", "<C-u>zz")
+  vim.keymap.set("n", "n", "nzzzv")
+  vim.keymap.set("n", "N", "Nzzzv")
 
   -- [[ Basic Autocommands ]]
   --  See `:help lua-guide-autocommands`
